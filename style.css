@@ -1,0 +1,171 @@
+:root{
+  /* primary */
+  --Darkcyan: hsl(158, 36%, 37%);
+--Cream: hsl(30, 38%, 92%);
+
+/* secondary */
+--Verydarkblue: hsl(212, 21%, 14%);
+--Darkgrayishblue: hsl(228, 12%, 48%);
+--White: hsl(0, 0%, 100%);
+--primary:'Montserrat';
+--secondary:'Fraunces';
+
+}
+
+*,*::after,*::before{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+html,body{
+  height: 100%;
+}
+
+body{
+  background: var(--Cream);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+h1,h2,h3,h4,h5,h6{
+  font-weight: 700;
+  color: var(--Verydarkblue);
+  margin-bottom: 15px;
+}
+img{
+  max-width: 100%;
+}
+p{
+  font-size: 14px;
+  color: var(--Darkgrayishblue);
+}
+/* main style css */
+
+.card{
+  width: 595px;
+  display: flex;
+  /* border: 2px solid red; */
+}
+
+.mobile_img{
+  display: none;
+}
+.desktop_img{
+  display: block;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.card_img{
+  flex-basis: 50%;
+  
+}
+.card_body{
+  flex-basis: 50%;
+  padding: 28px;
+  background-color: #fff;
+  border-radius: 0px 10px 10px 0px;
+
+}
+.card_body h6{
+  font-size: 15px;
+  color: var(--Darkgrayishblue);
+  font-weight: 500;
+  font-family: var(--primary);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.card_body h2{
+  font-size: 34px;
+  font-weight: 700;
+  font-family: var(--secondary);
+}
+.card_body p {
+
+  font-size: 15px;
+  font-family: var(--secondary);
+  font-weight: 500;
+  line-height: 24px;
+  margin-bottom: 5px;
+}
+.card_body p.price {
+
+  font-size: 30px;
+  color: var(--Darkcyan);
+  font-weight: 700;
+  margin-top: 10px;
+  margin: 25px 0px;
+}
+.card_body p span {
+
+  font-size: 14px;
+  color: var(--Darkgrayishblue);
+  font-weight: 500;
+  position: relative;
+  top: -5px;
+  left: 15px;
+  text-decoration: line-through;
+}
+
+.card_body button{
+  width: 100%;
+  background: var(--Darkcyan);
+  display: block;
+  border: none;
+  padding: 10px 5px;
+  border-radius: 5px;
+  color: var(--White);
+  font-size: 16px;
+  font-weight: 500;
+}
+.card_body button img {
+  position: relative;
+  left: -10px;
+  top: 3px;
+}
+
+/* responsive css */
+
+@media screen  and (max-width:595px) {
+  body{
+    align-items: flex-start;
+  }
+  .card{
+   flex-direction: column;
+   width: 80%;
+   margin-top: 20px;
+   
+  }
+  .card_body p {
+
+    font-size: 15px;
+   
+  }
+  .card_body h6 {
+
+    font-size: 13px;
+   
+  }
+  .card_body h2 {
+
+    font-size: 34px;
+   
+  }
+  .mobile_img{
+    display: block;
+    border-radius: 10px 10px 0px 0px ;
+  }
+  .desktop_img{
+    display: none;
+    
+  }
+  .card_body{
+ 
+    border-radius: 0px 0px 10px 10px;
+  
+  }
+  
+}
+
